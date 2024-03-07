@@ -53,6 +53,15 @@ public class StrukturList {
         }
     }
 
+    public void removeHead(){
+        if (HEAD == null){
+            System.out.println("List Kosong");
+        } else {
+            Node temp = HEAD;
+            HEAD = HEAD.getNext();
+        }
+    }
+
     public void removeMid(int e){
         Node preNode = new Node(0);
         Node tempNode;
@@ -82,6 +91,22 @@ public class StrukturList {
                 } else {
                     preNode.setNext(tempNode.getNext());
                 }
+            }
+        }
+    }
+
+    public void removeTail(){
+        Node preNode = null, lastNode;
+        if (HEAD != null){
+            if (HEAD.getNext()==null){
+                HEAD = null;
+            } else {
+                lastNode = HEAD;
+                while (lastNode.getNext() != null){
+                    preNode = lastNode;
+                    lastNode = lastNode.getNext();
+                }
+                preNode.setNext(null);
             }
         }
     }

@@ -2,21 +2,50 @@ package pertemuan5;
 
 public class StrukturListTest {
     public static void main(String[] args) {
-        StrukturList list = new StrukturList();
+//        Remove Head
+        StrukturList listH = new StrukturList();
+        listH.addTail(2);
+        listH.addTail(9);
+        listH.addTail(7);
+        listH.displayElement();
 
-        list.addTail(3);
-        list.addHead(2);
-        list.addTail(5);
-        list.addMid(6, 2);
-        list.addTail(1);
+        listH.removeHead();
+        listH.displayElement();
+        System.out.println();
 
-        list.displayElement();
+//        Remove Tail
+        StrukturList listT = new StrukturList();
+        listT.addTail(2);
+        listT.addTail(6);
+        listT.addTail(3);
+        listT.addTail(5);
+        listT.addTail(1);
+        listT.displayElement();
 
-        list.removeMid(3);
-        list.displayElement();
+        listT.removeTail();
+        listT.displayElement();
 
-        list.removeMid(5);
-        list.removeMid(6);
-        list.displayElement();
+        listT.removeHead();
+        listT.displayElement();
+        System.out.println();
+
+
+//        Remove Mid
+        StrukturList listM = new StrukturList();
+
+        listM.addTail(3);
+        listM.addHead(2);
+        listM.addTail(5);
+        listM.addMid(6, 2);
+        listM.addTail(1);
+
+        listM.displayElement();
+
+        listM.removeMid(3);
+        listM.displayElement();
+
+        listM.removeMid(5);
+        listM.removeMid(6);
+        listM.displayElement();
     }
 }
