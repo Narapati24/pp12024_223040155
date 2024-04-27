@@ -53,13 +53,17 @@ public class StruktureQueue {
 
     public void displayElements(){
         Node temp = FRONT;
-        if (FRONT != null) {
+        System.out.println("Size: " + size());
+        System.out.println("isEmpty: " + isEmpty());
+        System.out.print("ElementQueue: ");
+        if (!isEmpty()){
             for (int i = 0; i < size(); i++) {
                 System.out.print(temp.getData() + " ");
                 temp = temp.getNext();
             }
+            System.out.println("\nFront: " + front());
         } else {
-            System.out.print("Queue Kosong");
+            System.out.println("Queue Kosong");
         }
     }
 

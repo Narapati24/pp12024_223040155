@@ -19,9 +19,6 @@ public class QueueMain {
         queue = new StruktureQueue();
 
         System.out.println("\n### Sebelum Enqueue 4x ###");
-        System.out.println("Size: " + queue.size());
-        System.out.println("isEmpty: " + queue.isEmpty());
-        System.out.print("ElementQueue: ");
         queue.displayElements();
 
         queue.enqueue(2);
@@ -29,19 +26,11 @@ public class QueueMain {
         queue.enqueue(6);
         queue.enqueue(1);
 
-        System.out.println("\n\n### Enqueue 4x ###");
-        System.out.println("Size: " + queue.size());
-        System.out.println("isEmpty: " + queue.isEmpty());
-        System.out.print("ElementQueue: ");
+        System.out.println("\n### Enqueue 4x ###");
         queue.displayElements();
-        System.out.println("\nFront: " + queue.front());
 
         queue.dequeue();
         System.out.println("\n### Dequeue 1x ###");
-        System.out.println("Size: " + queue.size());
-        System.out.println("isEmpty: " + queue.isEmpty());
-        System.out.print("ElementQueue: ");
         queue.displayElements();
-        System.out.println("\nFront: " + queue.front());
     }
 }
